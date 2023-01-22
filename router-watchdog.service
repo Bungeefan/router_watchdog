@@ -1,0 +1,14 @@
+[Unit]
+Description=Router Watchdog Script
+After=network.target
+
+[Service]
+Type=simple
+KillSignal=SIGINT
+ExecStart=/home/pi/router_watchdog/venv/bin/python3 router_watchdog.py
+WorkingDirectory=/home/pi/router_watchdog/
+User=pi
+Group=pi
+
+[Install]
+WantedBy=multi-user.target
