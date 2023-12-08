@@ -3,7 +3,6 @@
 import logging
 import os.path
 import platform
-import signal
 import subprocess
 import sys
 import time
