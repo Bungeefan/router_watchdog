@@ -9,6 +9,7 @@ ExecStart=/home/pi/router_watchdog/venv/bin/python3 router_watchdog.py
 WorkingDirectory=/home/pi/router_watchdog/
 User=pi
 Group=pi
+Environment=PYTHONUNBUFFERED=1
 
 [Install]
 WantedBy=multi-user.target
