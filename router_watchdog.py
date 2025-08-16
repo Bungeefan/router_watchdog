@@ -13,7 +13,8 @@ from IPy import IP
 # Set up logging
 logging.basicConfig(
     level=logging.DEBUG,
-    format="%(asctime)s %(levelname)-8s %(name)s: %(message)s",
+    format="%(levelname)-8s %(name)s: %(message)s",
+    # format="%(asctime)s %(levelname)-8s %(name)s: %(message)s",
     # datefmt="%Y-%m-%d %H:%M:%S,%s",
     handlers=[
         logging.StreamHandler(sys.stdout),
