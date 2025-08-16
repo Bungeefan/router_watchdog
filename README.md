@@ -29,19 +29,10 @@ python3 router_watchdog.py
 
 ### Service
 
-#### Setup service
-
-Create a soft-link to systemd directory:
-
-```sh
-sudo ln -sf $(/bin/readlink -f router-watchdog.service) /etc/systemd/system/router-watchdog.service
-sudo systemctl daemon-reload
-```
-
 #### Enable and start service
 
 ```sh
-sudo systemctl enable router-watchdog.service
+sudo systemctl enable $(/bin/readlink -f router-watchdog.service)
 sudo systemctl start router-watchdog.service
 ```
 
